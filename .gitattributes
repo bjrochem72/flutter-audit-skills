@@ -1,0 +1,5 @@
+# This is a docs-first repo: the audits are Markdown, with one small helper
+# script. Exclude that script from GitHub's language statistics (Linguist) so
+# the language bar does not read as "Python". Topics carry the Dart/Flutter
+# signal instead. See github.com/github-linguist/linguist for the attributes.
+riverpod/ref_after_await.py linguist-detectable=false

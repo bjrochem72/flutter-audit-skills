@@ -1,0 +1,15 @@
+# Per-repo baselines captured by the audits (not shared)
+.audit-baseline
+*.audit-baseline
+
+# macOS
+.DS_Store
+
+# Python (ref-after-await script)
+__pycache__/
+*.py[cod]
+.venv/
+
+# Editors
+.idea/
+.vscode/
