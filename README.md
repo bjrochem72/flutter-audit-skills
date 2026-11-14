@@ -117,7 +117,32 @@ its provider. When code reaches the service directly, a test cannot swap in a fa
 so that code is hard to test. Provider files and start-up code are the two places
 where reaching it directly is fine.
 
-More audits (architecture, Firestore, Dart habits, testing) will follow.
+### Architecture
+
+**[feature-architecture](architecture/feature-architecture.md)** reviews one
+feature in depth against a four-layer architecture (domain, data, application,
+presentation) and modern Riverpod habits, then groups what it finds into an
+ordered fix plan. The layer model follows Andrea Bizzotto's Code with Andrea
+articles. Use this for a thorough single-feature read.
+
+**[clean-architecture](architecture/clean-architecture.md)** is the fast
+whole-repo version: it sweeps every feature for layer-boundary breaks (a domain
+file importing data or presentation, a repository under presentation, an entity
+missing value equality) without the depth of the per-feature review.
+
+**[routing](architecture/routing.md)** finds unsafe GoRouter use: a force-unwrapped
+path parameter, a hard-coded route string, the router provider watched instead of
+read, and a tab switch that stacks screens.
+
+**[form-patterns](architecture/form-patterns.md)** checks that your forms follow
+one declared pattern, keep validation out of the widget, and handle loading,
+offline and reset consistently.
+
+**[quality](architecture/quality.md)** finds flow-sensitive bugs the structural
+audits miss: asymmetric handling, silent early returns, dead defensive code and
+validation gaps.
+
+More audits (Firestore, Dart habits, testing) will follow.
 
 ## Adapting to your codebase
 
