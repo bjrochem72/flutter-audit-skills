@@ -1,0 +1,12 @@
+version: 2
+updates:
+  # Docs/skills repo: no pub or npm manifests, so GitHub Actions is the only
+  # ecosystem to track. Covers any workflow added later.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
